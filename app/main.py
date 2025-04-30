@@ -15,7 +15,7 @@ class Animal:
     def __repr__(self) -> str:
         instance_dict = (f"{{Name: {self.name}, "
                          f"Health: {self.health}, "
-                         f" Hidden: {self.hidden}}}")
+                         f"Hidden: {self.hidden}}}")
         return instance_dict
 
 
@@ -30,3 +30,7 @@ class Carnivore(Animal):
             herbivore.health -= 50
             if herbivore.health <= 0:
                 Animal.alive.remove(herbivore)
+
+pantera = Carnivore("Bagira")
+snake = Carnivore("Kaa")
+print(Animal.alive)
